@@ -29,15 +29,15 @@ Salesforce.org对EDA、NPSP等开源项目都推荐采用`CumulusCI`进行开发
 
 这里只记录可以成功将`EDA 1.111`版本以非托管形式部署到Org中的办法，不对原理进行详细介绍。
 
-1. `git clone https://github.com/SalesforceFoundation/EDA`，将最新版本的EDA源码Clone到本地
+1. `git clone https://github.com/SalesforceFoundation/EDA`，将最新版本的EDA源码Clone到本地，删除掉其中的`Feature Parameters`后，将git库加回自己的Github中。
 
 2. VScode打开该文件夹，运行`SFDX: Create Project`命令，要求创立`Empty Templete`并选择Overwrite掉现有工程中各个组件的config；运行`SFDX: Authorize an Org`，链接到需要部署的Org中
 
 3. 在进行部署前，要确认组织中的`Account`对象至少有一条记录
 
-4. 编辑根目录下的`cumulusci.yml`文件如图，增加`project→dependencies`一节，保存编辑
+4. 编辑根目录下的`cumulusci.yml`文件如图，修改`project→dependencies`一节，保存编辑
 
-   ![cumulusci.yml](https://656e-env-iybewaod-1257393063.tcb.qcloud.la/image-20210308183459143.png)
+   ![修改成自定义存储库](https://bricksite-1257393063.cos.ap-shanghai.myqcloud.com/image-20210403002447907.png)
 
 5. 在根目录终端中输入`cci org connect --org <要部署的组织略称>`，将CumulusCI与要部署的组织相链接
 
@@ -45,17 +45,20 @@ Salesforce.org对EDA、NPSP等开源项目都推荐采用`CumulusCI`进行开发
 
    ![update_dependencies](https://656e-env-iybewaod-1257393063.tcb.qcloud.la/image-20210308183915568.png)
 
-7. 在根目录终端中输入`cci run task update_dependencies --org <要部署的组织略称>`，会收到报错，提示featureParameter超过25个的限制。
+7. 在根目录终端中依次运行如下四个流程
 
-8. 删除本地目录中的`SettingsHealthCheckLastRunDate.featureParameterDate-meta.xml`，文件位置如图所示
+   ```bash
+   # 安装EDA必须的Org环境配置
+   cci run task deploy_pre --org <要部署的组织略称>
+   # 以非托管形式部署元数据
+   cci run flow deploy_unmanaged --org <要部署的组织略称>
+   # 安装所有EDA依赖，包括deploy_post的部分
+   cci run flow dependencies --org <要部署的组织略称> 
+   # 进行post-install阶段的部署
+   cci run flow config_dev --org <要部署的组织略称> 
+   ```
 
-   ![要删除的文件](https://656e-env-iybewaod-1257393063.tcb.qcloud.la/image-20210308184329266.png)
-
-9. 利用`Salesforce CLI`将force-app整个部署到组织中
-
-   ![部署本地SFDX项目到组织中](https://656e-env-iybewaod-1257393063.tcb.qcloud.la/image-20210308184547769.png)
-
-10. 完成EDA的非托管部署
+8. 完成EDA的非托管部署
 
 ## 原理简要说明
 
