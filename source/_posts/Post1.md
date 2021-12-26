@@ -8,6 +8,7 @@ categories:
 ### 关于CTools和Pentaho其他套件的关系
 
 1. Pentaho server中集成的CTools用于创建和浏览Dashboards和Reports，两种文件区别在于：前者可以设置组件的自动刷新，如大屏展板更新数据；后者使用PRD(Pentaho Reports Designer)设计并上传到Pentaho Server中，在浏览Reports时请求更新数据并渲染到静态的报告中。
+<!-- more -->
 2. CTools使用CDA的形式记录Dashboards和数据库链接的方式，是一串XML文件，可以在首页的`Create New`中建立一个新的数据连接，在XML中修改更方便。
 
 ### 关于数据连接的问题

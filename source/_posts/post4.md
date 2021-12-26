@@ -7,7 +7,7 @@ categories:
 
 
 ## 自动运行的bat脚本编写
-
+<!-- more -->
 ``` powershell
 D:
 cd D:\data-integration

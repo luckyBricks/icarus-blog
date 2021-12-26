@@ -6,7 +6,7 @@ categories:
 ---
 Salesforce中本身提供了多种API共开发者和外部系统对接使用。面对不同的需求场景可以使用不同种类的对接方式。
 
-1. 数据从Salesforce导出
+<!-- more -->1. 数据从Salesforce导出
    1. 自定义开发，Salesforce建立REST Controller或SOAP Controller，外部系统通过轮询捕获数据
    2. Salesforce中建立Trigger，并在其中CallOut外部系统的REST Api，将数据变更推送到外部系统
    3. Saleforce中建立Streaming API，外部系统握手后监听该API，捕获实时的数据变更，这一点还可以实现不同Org之间的数据同步

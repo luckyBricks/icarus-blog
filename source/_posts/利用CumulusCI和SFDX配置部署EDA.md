@@ -8,7 +8,7 @@ categories:
 ## 前提概要
 
 `Education Data Architecture(EDA)`是由Salesforce.org组织开发的开源项目，通过托管软件包的形式发布在AppExchange之中。EDA每两个礼拜（文档中记载是Biweekly）向所有安装了EDA托管软件包的组织/沙盒推送最新版本。
-
+<!-- more -->
 但是，要将EDA进行集成开发时，自动更新功能很可能覆盖掉自行开发的代码。虽然所有由Salesforce.org创立的开源项目都是**可选升级**，即每次有新版本推送时都需要管理员手动确认是否更新，但是以防万一，还是对特定的EDA版本进行非托管部署比较安全。
 
 > **托管软件包形式 Managed Packages**：发布于App Exchange中、会自动向安装了的组织推送升级的软件包

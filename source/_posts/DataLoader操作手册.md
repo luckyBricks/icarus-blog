@@ -5,7 +5,7 @@ categories:
     - CRM
 ---
 DataLoader是Salesforce官方提供的一款工具，用于本地大批量数据与Salesforce组织之间的加载和导入。除了项目起始需要导入大量基础数据外，也可以利用DataLoader进行数据的批处理导入工作。
-
+<!-- more -->
 ## 连接Org，并设定字段映射
 
 1. 打开DataLoader，选择insert

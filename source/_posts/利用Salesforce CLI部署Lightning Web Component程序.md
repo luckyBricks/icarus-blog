@@ -9,7 +9,7 @@ categories:
 1. 获取源码、通过测试
 2. 建立组织/临时组织
 3. 导入数据/测试数据
-
+<!-- more -->
 ## 获取通过测试的源码
 
 在VScode中进行LWC的开发，需要先部署好Salesforce的VScode插件。源码由特定的VCS系统管理。这里记录的是在Trailhead中的示例程序Dreamhouse的部署。

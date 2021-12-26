@@ -7,7 +7,7 @@ categories:
 ---
 
 Salesforce为LWC组件提供了丰富的API用于与调用Salesforce进行数据调用，这篇文章进行简要的学习备忘。
-
+<!-- more -->
 ## LWC编程模型与传统前后端分离项目模型比较
 
 与一般的Spring Boot程序不同，Salesforce DX项目中不存在DTO层的概念，因此无需手动建立DTO层来Mapping Apex对象与Salesforce组织中的`sObjects`。但这并不意味着必须人工管理`Apex对象`与`sObjects`之间的关系。在初始化一个`sfdx项目`，并将其与组织进行链接后，只要先将组织中`sObject`的元数据拉取到项目中，就可以在使用过程中方便地引用。

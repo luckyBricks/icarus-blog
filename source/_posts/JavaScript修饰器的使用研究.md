@@ -8,7 +8,7 @@ categories:
 在学习Salesforce的Lightning Web Components框架时，时常见到`修饰器`的使用。
 
 修饰器`Decorator`是ES7的一个提案，目前还是实验性质的新功能。在VScode中可以依照如下方式关闭使用警告。
-
+<!-- more -->
 ![image-20210204105100705](https://656e-env-iybewaod-1257393063.tcb.qcloud.la/image-20210204105100705.png)
 
 修饰器用来解决两个问题：
