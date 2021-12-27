@@ -1,6 +1,7 @@
 ---
 title: 使用CumulusCI部署Salesforce.org开源项目(非托管软件包)
 date: 2021-03-08 19:02:26
+toc: true
 categories:
     - CRM
 ---
@@ -37,7 +38,7 @@ Salesforce.org对EDA、NPSP等开源项目都推荐采用`CumulusCI`进行开发
 
 4. 编辑根目录下的`cumulusci.yml`文件如图，修改`project→dependencies`一节，保存编辑
 
-   ![修改成自定义存储库](https://bricksite-1257393063.cos.ap-shanghai.myqcloud.com/image-20210403002447907.png)
+   ![修改成自定义存储库](/images/image-20210403002447907.png)
 
 5. 在根目录终端中输入`cci org connect --org <要部署的组织略称>`，将CumulusCI与要部署的组织相链接
 

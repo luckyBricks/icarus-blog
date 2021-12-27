@@ -1,6 +1,7 @@
 ---
 title: 探究Lightning Web Component 与Salesforce的数据交互
 date: 2021-02-26 21:32:16
+toc: true
 categories:
     - CRM
 
@@ -22,4 +23,4 @@ Salesforce为LWC组件提供了丰富的API用于与调用Salesforce进行数据
 
 ![Apex元数据定义](https://656e-env-iybewaod-1257393063.tcb.qcloud.la/image-20210226170332365.png)
 
-SFDX项目中，无需手动管理元数据DTO的原因就在这里，已经定义好了。LWC开发模型中数据交互通过Lightning Data Service实现，其包括了一个`@wire`JS装饰器和配套开发好的一套CURD API，存放在`'lightning'`目录之中。使用Lightning Data Servicehttps://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.reference_ui_api需要与Lightning基本UI组件配合，就可以在无需重写Apex Controller的情况下方便取用/改写Salesforce组织中存放的数据。如果基本CURD无法满足的LWC需求，就可以通过自行定义的Apex Controller进行数据的处理和交互。
+SFDX项目中，无需手动管理元数据DTO的原因就在这里，已经定义好了。LWC开发模型中数据交互通过Lightning Data Service实现，其包括了一个`@wire`JS装饰器和配套开发好的一套CURD API，存放在`'lightning'`目录之中。使用![Lightning Data Service](https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.reference_ui_api)需要与Lightning基本UI组件配合，就可以在无需重写Apex Controller的情况下方便取用/改写Salesforce组织中存放的数据。如果基本CURD无法满足的LWC需求，就可以通过自行定义的Apex Controller进行数据的处理和交互。

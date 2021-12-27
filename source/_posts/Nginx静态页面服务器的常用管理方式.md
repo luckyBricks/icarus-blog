@@ -1,6 +1,7 @@
 ---
 title: Nginx静态页面服务器的常用管理方式
 date: 2019-09-28 19:43:03
+toc: true
 categories:
   - 记录
 ---

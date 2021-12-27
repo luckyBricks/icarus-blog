@@ -1,6 +1,7 @@
 ---
 title: Pentaho CTools 使用踩坑
 date: 2020-07-03 16:20:37
+toc: true
 categories:
     - BI
 ---

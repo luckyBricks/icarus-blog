@@ -1,6 +1,7 @@
 ---
 title: Kettle运行转换/工作的几种优化方式
 date: 2020-07-06 15:36:10
+toc: true
 categories:
 	- BI
 ---
